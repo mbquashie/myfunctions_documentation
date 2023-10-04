@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+    <head>
+                <title>Thermostat - Functions</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            <link rel="canonical" href="https://mbquashie.github.com/Thermostat/">
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+                <link href="../assets/_mkdocstrings.css" rel="stylesheet">
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">Functions</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../about/">[About]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../Perimeter/">[Perimeter]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../Area/">[Area]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" active 
+                            nav-link text-gray text-decoration-none" href="./">[Thermostat]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../Adder/">[Adder]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../Digits/">[Digits]</a>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main>
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+                <h1 class=" title" id="component-title">Thermostat</h1>
+            
+        </header>
+        <p><div class="doc doc-object doc-function">
+
+
+
+<a id="example_functions.my_thermo_stat"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Adjusts the thermostat status based on the current temperature and desired temperature.</p>
+<p>This function determines the appropriate thermostat status (Heat, AC, or Off)
+based on the temperature and desired temperature settings.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>temp</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The current temperature in degrees Fahrenheit.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>desired_temp</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The desired temperature in degrees Fahrenheit.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The thermostat status, which can be 'Heat' (if temp is significantly lower
+ than desired_temp), 'AC' (if temp is significantly higher than desired_temp),
+ or 'Off' (if the current temperature is within 5 degrees of the desired temperature).</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">my_thermo_stat</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="go">&#39;Heat&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_thermo_stat</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="go">&#39;AC&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_thermo_stat</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="go">&#39;Off&#39;</span>
+</code></pre></div>
+
+          <details class="quote">
+            <summary>Source code in <code>example_functions.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">my_thermo_stat</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">desired_temp</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adjusts the thermostat status based on the current temperature and desired temperature.</span>
+
+<span class="sd">    This function determines the appropriate thermostat status (Heat, AC, or Off)</span>
+<span class="sd">    based on the temperature and desired temperature settings.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        temp (int): The current temperature in degrees Fahrenheit.</span>
+<span class="sd">        desired_temp (int): The desired temperature in degrees Fahrenheit.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The thermostat status, which can be &#39;Heat&#39; (if temp is significantly lower</span>
+<span class="sd">             than desired_temp), &#39;AC&#39; (if temp is significantly higher than desired_temp),</span>
+<span class="sd">             or &#39;Off&#39; (if the current temperature is within 5 degrees of the desired temperature).</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; my_thermo_stat(70, 75)</span>
+<span class="sd">        &#39;Heat&#39;</span>
+<span class="sd">        &gt;&gt;&gt; my_thermo_stat(80, 75)</span>
+<span class="sd">        &#39;AC&#39;</span>
+<span class="sd">        &gt;&gt;&gt; my_thermo_stat(74, 75)</span>
+<span class="sd">        &#39;Off&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="n">desired_temp</span> <span class="o">-</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;Heat&#39;</span>
+    <span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="n">desired_temp</span> <span class="o">+</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;AC&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;Off&#39;</span>
+    <span class="k">return</span> <span class="n">status</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
+            <div class="col themed-grid-col">
+                <a rel="prev" href="../Area/" class="nav-link">
+                    <i class="fa fa-arrow-left"></i> Previous
+                </a>
+            </div>
+            <div class="col themed-grid-col"></div>
+            <div class="col themed-grid-col">
+                <a rel="next" href="../Adder/" class="nav-link">
+                    Next <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+
+    </body>
+
+</html>
